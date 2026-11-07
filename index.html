@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Micaela Dias • Primaveril • 14.12.2026</title>
+  <meta name="description" content="Você está convidado(a) para a celebração da Micaela Dias — 14/12/2026, Coco Bambu Shopping Ponta Negra." />
+  <!-- Prévia do WhatsApp: se o subdomínio for outro, troque o endereço abaixo -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://micaela.convidaeu.com.br/" />
+  <meta property="og:title" content="Micaela Dias • Você está convidado(a)" />
+  <meta property="og:description" content="Primaveril • 14.12.2026 • Coco Bambu Ponta Negra — toque para abrir o convite 🌸" />
+  <meta property="og:image" content="https://micaela.convidaeu.com.br/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#fbe3ea" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Great+Vibes&family=Pinyon+Script&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --rosa-900:#5c1f36; --rosa-800:#7d2a49; --rosa-700:#9c3a5e; --rosa-500:#d1708f; --rosa-300:#f2b6c8; --rosa-100:#fde9ef;
+      --texto:#5c2a3c; --suave:rgba(92,42,60,.68); --fio:rgba(156,58,94,.28);
+      --tx:0; --ty:0;
+      --serif:'Playfair Display',Georgia,'Times New Roman',serif;
+      --sans:'Manrope',system-ui,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{background:#fbe3ea;scroll-behavior:smooth}
+    body{font-family:var(--sans);color:var(--texto);min-height:100vh;overflow-x:hidden;-webkit-tap-highlight-color:transparent;-webkit-font-smoothing:antialiased}
+    body.locked{overflow:hidden;height:100vh;height:100svh}
+
+    /* ================= FUNDO: rosa claro com luzes suaves ================= */
+    .bg{position:fixed;inset:0;z-index:-3;
+      background:radial-gradient(ellipse at 50% -15%, #ffffff 0%, transparent 60%),
+                 linear-gradient(180deg,#fff6f8 0%,#fde6ed 40%,#f9d3df 80%,#f5c3d2 100%)}
+    .luzes{position:fixed;inset:-20%;z-index:-2;pointer-events:none;opacity:.7}
+    .luzes i{position:absolute;width:70vmax;height:70vmax;border-radius:50%}
+    .luzes i:nth-child(1){left:-15%;top:0;background:radial-gradient(circle,rgba(255,182,206,.55),transparent 62%);animation:flutua1 22s ease-in-out infinite alternate}
+    .luzes i:nth-child(2){right:-20%;top:35%;background:radial-gradient(circle,rgba(255,255,255,.8),transparent 60%);animation:flutua2 28s ease-in-out infinite alternate}
+    .luzes i:nth-child(3){left:15%;bottom:-15%;background:radial-gradient(circle,rgba(240,150,180,.35),transparent 60%);animation:flutua1 34s ease-in-out infinite alternate-reverse}
+    @keyframes flutua1{to{transform:translate(12vw,8vh) scale(1.15)}}
+    @keyframes flutua2{to{transform:translate(-14vw,-6vh) scale(.9)}}
+
+    /* ================= PÉTALAS CAINDO (3 camadas) ================= */
+    .petalas{position:fixed;inset:-40px;pointer-events:none;z-index:0;overflow:hidden}
+    .petalas.longe{transform:translate(calc(var(--tx)*-6px),calc(var(--ty)*-6px))}
+    .petalas.meio{transform:translate(calc(var(--tx)*-14px),calc(var(--ty)*-14px))}
+    .petalas.perto{z-index:6;transform:translate(calc(var(--tx)*-26px),calc(var(--ty)*-26px))}
+    .petalas span{position:absolute;top:-30px;border-radius:80% 0 80% 0;
+      background:linear-gradient(135deg,#ffd6e2,#f08aab);box-shadow:inset -1px -1px 2px rgba(156,58,94,.25);
+      animation:cai linear infinite;will-change:transform}
+    .petalas.perto span{filter:blur(2px);opacity:.55}
+    @keyframes cai{
+      0%{transform:translate(0,0) rotate(0deg) rotateX(0deg)}
+      50%{transform:translate(var(--sway,30px),55vh) rotate(200deg) rotateX(160deg)}
+      100%{transform:translate(0,115vh) rotate(400deg) rotateX(320deg)}}
+
+    /* ================= TIPOGRAFIA ================= */
+    .wide{font-family:var(--sans);font-weight:600;text-transform:uppercase;letter-spacing:.38em;font-size:10px;color:var(--rosa-700)}
+    /* rosé gold: o reflexo corre quando o celular inclina */
+    .holo{
+      background:linear-gradient(115deg,#8f3253 0%,#d27996 16%,#a8405f 30%,#e09ab0 44%,#9c3a5e 58%,#d4819c 74%,#842c4c 88%,#c86a8a 100%);
+      background-size:260% 260%;
+      background-position:calc(50% + var(--tx)*45%) calc(50% + var(--ty)*45%);
+      -webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+    .fio{display:block;height:1px;background:linear-gradient(90deg,transparent,var(--fio) 20%,var(--rosa-500) 50%,var(--fio) 80%,transparent)}
+
+    /* ================= HERO ================= */
+    .hero{position:relative;z-index:2;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+      text-align:center;padding:calc(56px + env(safe-area-inset-top)) 18px 110px}
+    .tema-hero{font-family:var(--serif);font-weight:500;text-transform:uppercase;font-size:clamp(1rem,5vw,1.35rem);letter-spacing:.26em;padding-left:.26em;color:var(--rosa-800)}
+    .flor{width:96px;height:96px;margin:24px auto 14px;display:block;animation:gira 50s linear infinite;filter:drop-shadow(0 6px 14px rgba(209,112,143,.35))}
+    @keyframes gira{to{transform:rotate(360deg)}}
+    .nome{font-family:var(--fonte-nome,var(--serif));font-style:var(--estilo-nome,normal);font-weight:var(--peso-nome,400);
+      font-size:calc(clamp(3.6rem,17vw,7rem) * var(--escala-nome,1));line-height:1.15;padding:.05em .2em .12em;
+      filter:drop-shadow(0 4px 14px rgba(209,112,143,.25))}
+    .sob{display:flex;align-items:center;gap:14px;margin-top:10px}
+    .sob .fio{width:52px}
+    .sob b{font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.5em;padding-left:.5em;text-transform:uppercase;color:var(--rosa-700)}
+    .hero-data{margin-top:30px;font-family:var(--serif);font-variant-numeric:lining-nums;font-size:1.15rem;letter-spacing:.3em;color:var(--rosa-800)}
+    .role{position:absolute;left:50%;bottom:calc(34px + env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;
+      opacity:0;transition:opacity 1s ease 1.2s}
+    .aberto .role{opacity:1}
+    .role i{display:block;width:1px;height:42px;background:linear-gradient(var(--rosa-700),transparent);transform-origin:top;animation:desce 2.2s ease-in-out infinite}
+    @keyframes desce{0%{transform:scaleY(0);opacity:1}60%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1);opacity:0}}
+
+    /* ================= VÉU DE PÉTALAS (abertura) ================= */
+    #veu{position:fixed;left:0;top:0;width:100vw;height:100vh;height:100lvh;z-index:30;touch-action:none;cursor:grab;
+      transition:opacity 1.5s ease, transform 1.8s cubic-bezier(.2,.7,.2,1), filter 1.5s ease}
+    #veu.some{opacity:0;transform:scale(1.08);filter:blur(8px);pointer-events:none}
+    .dica{position:fixed;inset:0;z-index:31;pointer-events:none;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+      transition:opacity .6s ease;padding:0 24px}
+    .dica::before{content:"";position:absolute;left:50%;top:50%;width:min(130vw,560px);height:340px;transform:translate(-50%,-48%);z-index:-1;
+      background:radial-gradient(ellipse,rgba(255,247,250,.95) 0%,rgba(255,247,250,.7) 40%,rgba(255,247,250,0) 70%)}
+    .dica.some{opacity:0}
+    .dica .dedo{position:relative;width:150px;height:70px;margin-bottom:18px}
+    .dica .dedo svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+    .dica .rastro{stroke-dasharray:240;stroke-dashoffset:240;animation:traco 2.6s ease-in-out infinite}
+    .dica .ponta{offset-path:path('M10 50 C 45 5, 70 70, 100 30 S 140 20, 145 45');animation:anda 2.6s ease-in-out infinite}
+    @keyframes traco{0%{stroke-dashoffset:240}55%,100%{stroke-dashoffset:0}}
+    @keyframes anda{0%{offset-distance:0%;opacity:1}55%{offset-distance:100%;opacity:1}75%,100%{offset-distance:100%;opacity:0}}
+    .dica h2{font-family:var(--serif);font-style:italic;font-weight:400;font-size:2rem;line-height:1.1;color:var(--rosa-900)}
+    .dica p{margin-top:10px;font-family:var(--sans);font-weight:600;font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:var(--rosa-700)}
+    .abrir-alt{position:fixed;left:50%;bottom:calc(30px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:32;
+      border:1px solid rgba(124,42,73,.35);background:rgba(255,255,255,.6);color:var(--rosa-800);border-radius:999px;
+      padding:11px 20px;font:500 12px var(--sans);letter-spacing:.06em;cursor:pointer;white-space:nowrap;
+      -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);transition:opacity .5s}
+    .abrir-alt.some{opacity:0;pointer-events:none}
+
+    /* ================= BOTÃO DA MÚSICA ================= */
+    .music-btn{position:fixed;top:calc(14px + env(safe-area-inset-top));right:14px;z-index:20;
+      width:44px;height:44px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:3px;
+      background:rgba(255,255,255,.55);border:1px solid rgba(156,58,94,.35);
+      -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);transition:opacity .4s, transform .2s}
+    .music-btn[hidden]{display:none}
+    .music-btn:active{transform:scale(.92)}
+    .music-btn i{display:block;width:2px;height:15px;border-radius:2px;background:var(--rosa-700);transform-origin:bottom;animation:eq 1.1s ease-in-out infinite}
+    .music-btn i:nth-child(2){animation-delay:-.35s}.music-btn i:nth-child(3){animation-delay:-.7s}.music-btn i:nth-child(4){animation-delay:-.2s}
+    @keyframes eq{0%,100%{transform:scaleY(.3)}50%{transform:scaleY(1)}}
+    .music-btn.off{opacity:.65}
+    .music-btn.off i{animation:none;transform:scaleY(.25)}
+    .music-btn.off::after{content:"";position:absolute;width:28px;height:1.5px;background:var(--rosa-700);transform:rotate(-45deg)}
+
+    /* ================= SEÇÕES ================= */
+    main{position:relative;z-index:2}
+    .sec{max-width:520px;margin:0 auto;padding:80px 26px;text-align:center;position:relative}
+    .sec + .sec::before{content:"";position:absolute;left:50%;top:0;width:1px;height:46px;transform:translateX(-50%);
+      background:linear-gradient(transparent,var(--rosa-500))}
+    .sec .wide{display:block;margin-bottom:24px}
+    .titulo{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(2.5rem,11vw,3.4rem);line-height:1.05}
+
+    .intro p{font-family:var(--serif);font-style:italic;font-size:1.38rem;line-height:1.6;color:var(--rosa-900)}
+
+    .foto{max-width:300px;margin:0 auto;padding:10px;border:1px solid var(--fio);border-radius:200px 200px 18px 18px;background:rgba(255,255,255,.35)}
+    .foto img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:190px 190px 12px 12px}
+
+    .data-grande{font-family:var(--serif);font-weight:400;font-variant-numeric:lining-nums;font-size:clamp(5.6rem,32vw,10rem);line-height:.9;letter-spacing:-.03em}
+    .data-grande .pt{font-size:.5em;vertical-align:.32em;margin:0 .02em}
+    .data-sub{margin-top:18px}
+    .hora{display:flex;align-items:baseline;justify-content:center;gap:14px;margin-top:36px}
+    .hora strong{font-family:var(--serif);font-weight:400;font-size:2.8rem;line-height:1}
+    .hora span{font-size:12.5px;color:var(--suave);text-align:left;line-height:1.4}
+    .contagem{display:grid;grid-template-columns:repeat(4,1fr);margin-top:44px;border-top:1px solid var(--fio);border-bottom:1px solid var(--fio)}
+    .contagem div{padding:18px 0 16px;overflow:hidden}
+    .contagem div + div{border-left:1px solid var(--fio)}
+    .contagem b{display:block;font-family:var(--serif);font-weight:400;font-size:2.15rem;line-height:1;color:var(--rosa-800);font-variant-numeric:lining-nums tabular-nums}
+    .contagem b.rola{animation:rola .55s cubic-bezier(.2,.8,.2,1)}
+    @keyframes rola{from{transform:translateY(-55%);opacity:0;filter:blur(3px)}to{transform:none;opacity:1;filter:none}}
+    .contagem small{display:block;margin-top:9px;font-size:8.5px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--suave)}
+    .chegou{grid-column:span 4;padding:22px 0;font-family:var(--serif);font-style:italic;font-size:1.8rem;color:var(--rosa-800)}
+
+    .traje .dica-cor{margin-top:16px;font-size:14px;color:var(--suave);line-height:1.6}
+    .bolinhas{display:flex;justify-content:center;gap:8px;margin-top:14px}
+    .bolinhas i{width:18px;height:18px;border-radius:50%;border:2px solid #fff;box-shadow:0 2px 6px rgba(124,42,73,.25)}
+
+    .local .end{margin-top:18px;font-size:15px;line-height:1.65;color:var(--texto);font-weight:400}
+    .local .det{margin-top:4px;font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--rosa-700)}
+    .links{display:flex;justify-content:center;gap:10px;margin-top:26px;flex-wrap:wrap}
+    .link{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;border:1px solid rgba(156,58,94,.4);
+      color:var(--rosa-800);text-decoration:none;font-size:12.5px;font-weight:600;letter-spacing:.04em;background:rgba(255,255,255,.45);transition:background .2s}
+    .link:hover{background:rgba(255,255,255,.8)}
+    .link svg{width:12px;height:12px}
+
+    /* presentes */
+    .lojas{list-style:none;margin-top:8px;border-top:1px solid var(--fio)}
+    .lojas li{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:18px 4px;border-bottom:1px solid var(--fio);text-align:left}
+    .lojas strong{font-family:var(--serif);font-weight:500;font-size:1.3rem;color:var(--rosa-900)}
+    .lojas span{font-size:12px;color:var(--suave);text-align:right}
+    .pix{position:relative;margin-top:34px;padding:30px 22px 26px;border-radius:24px;background:rgba(255,255,255,.55);
+      border:1px solid rgba(255,255,255,.9);box-shadow:0 14px 34px rgba(156,58,94,.14)}
+    .pix .wide{margin-bottom:10px}
+    .pix p{font-size:13.5px;color:var(--suave);line-height:1.6}
+    .pix .chave{margin-top:14px;font-family:var(--serif);font-size:1.7rem;font-variant-numeric:lining-nums;letter-spacing:.04em;color:var(--rosa-900);word-break:break-all}
+    .pix .banco{margin-top:4px;font-size:13px;color:var(--suave)}
+    .copiar{margin-top:18px;display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+      font:600 11.5px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#fff;
+      background:linear-gradient(135deg,#c75a7e,#9c3a5e);box-shadow:0 8px 20px rgba(156,58,94,.3);transition:transform .2s}
+    .copiar:active{transform:scale(.96)}
+    .copiar svg{width:15px;height:15px}
+    .copiar.ok{background:linear-gradient(135deg,#5aa27a,#3e7d5b)}
+
+    .rsvp .sub{margin-top:14px;font-size:13.5px;color:var(--suave);line-height:1.6}
+    .guest{display:block;width:100%;max-width:330px;margin:30px auto 0;padding:12px 4px;border:0;border-bottom:1px solid rgba(124,42,73,.45);
+      background:transparent;color:var(--rosa-900);text-align:center;font:400 16px var(--sans);outline:none;border-radius:0;transition:border-color .2s}
+    .guest::placeholder{color:rgba(92,42,60,.5);font-size:14px}
+    .guest:focus{border-bottom-color:var(--rosa-800)}
+    .guest.erro{border-bottom-color:#d13b5a;animation:treme .35s ease}
+    @keyframes treme{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+    .acoes{display:flex;flex-direction:column;gap:12px;align-items:center;margin-top:28px}
+    .btn{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:9px;width:100%;max-width:330px;
+      padding:16px 22px;border-radius:999px;text-decoration:none;cursor:pointer;font:600 12px var(--sans);letter-spacing:.2em;text-transform:uppercase;
+      transition:transform .2s ease}
+    .btn:active{transform:scale(.97)}
+    .btn svg{width:17px;height:17px;flex:none}
+    .btn-rosa{color:#fff;background:linear-gradient(135deg,#d97a9a 0%,#b84d70 50%,#8f3253 100%);box-shadow:0 14px 30px rgba(156,58,94,.35)}
+    .btn-rosa::after{content:"";position:absolute;top:0;bottom:0;width:40%;left:-60%;
+      background:linear-gradient(105deg,transparent,rgba(255,255,255,.55),transparent);animation:reflexo 3.8s ease-in-out infinite}
+    @keyframes reflexo{0%,55%{left:-60%}85%,100%{left:120%}}
+    .btn-linha{color:var(--rosa-800);border:1px solid rgba(156,58,94,.45);background:rgba(255,255,255,.35)}
+    .agenda{display:inline-flex;align-items:center;gap:8px;margin-top:22px;color:var(--rosa-800);font-size:13px;text-decoration:none;
+      border-bottom:1px solid var(--fio);padding-bottom:3px}
+    .agenda svg{width:15px;height:15px}
+
+    .fim{padding:40px 24px calc(40px + env(safe-area-inset-bottom));text-align:center}
+    .fim .assin{font-family:var(--fonte-nome,var(--serif));font-style:var(--estilo-nome,normal);font-size:calc(1.9rem * var(--escala-nome,1))}
+    .fim .wide{display:block;margin-top:10px;font-size:9px}
+    .fim .marca{margin-top:46px;font-size:11px;color:var(--suave);letter-spacing:.05em}
+    .fim .marca a{color:var(--rosa-800);font-weight:600;text-decoration:none}
+
+    /* entrada suave ao rolar */
+    .rv{opacity:0;transform:translateY(26px);filter:blur(6px);transition:opacity 1s ease, transform 1s cubic-bezier(.2,.7,.2,1), filter 1s ease}
+    .rv.in{opacity:1;transform:none;filter:none}
+    .rv.d1{transition-delay:.12s}.rv.d2{transition-delay:.24s}.rv.d3{transition-delay:.36s}
+    .hero .rv{opacity:1;transform:none;filter:none}
+
+    @media (prefers-reduced-motion: reduce){
+      .petalas span,.luzes i,.flor{animation:none !important}
+      .rv{opacity:1;transform:none;filter:none;transition:none}
+    }
+  </style>
+</head>
+<body class="locked">
+  <div class="bg"></div>
+  <div class="luzes" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="petalas longe" id="pet1" aria-hidden="true"></div>
+  <div class="petalas meio" id="pet2" aria-hidden="true"></div>
+
+  <!-- ===== VÉU DE PÉTALAS: o convidado passa o dedo para revelar ===== -->
+  <canvas id="veu" aria-hidden="true"></canvas>
+  <div class="dica" id="dica" aria-hidden="true">
+    <div class="dedo">
+      <svg viewBox="0 0 150 70">
+        <path class="rastro" d="M10 50 C 45 5, 70 70, 100 30 S 140 20, 145 45" fill="none" stroke="rgba(156,58,94,.3)" stroke-width="10" stroke-linecap="round"/>
+        <circle class="ponta" r="9" fill="rgba(156,58,94,.55)" stroke="#fff" stroke-width="2"/>
+      </svg>
+    </div>
+    <h2>Passe o dedo nas pétalas</h2>
+    <p>para revelar o convite</p>
+  </div>
+  <button class="abrir-alt" id="abrirAlt" type="button">ou toque aqui para abrir 🌸</button>
+
+  <button class="music-btn" id="btnMusica" type="button" aria-label="Pausar música" hidden><i></i><i></i><i></i><i></i></button>
+
+  <main id="convite">
+    <!-- ===== HERO ===== -->
+    <header class="hero">
+      <p class="tema-hero" id="f-ocasiao">Você é nosso convidado</p>
+
+      <svg class="flor" viewBox="-50 -50 100 100" aria-hidden="true">
+        <defs>
+          <linearGradient id="gPet" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffe3eb"/><stop offset=".6" stop-color="#f4a2bb"/><stop offset="1" stop-color="#d9708f"/>
+          </linearGradient>
+          <path id="pet" d="M0 -6 C -16 -18 -14 -40 -4 -44 L 0 -39 L 4 -44 C 14 -40 16 -18 0 -6 Z" fill="url(#gPet)" stroke="#fff" stroke-width=".8"/>
+        </defs>
+        <use href="#pet"/><use href="#pet" transform="rotate(72)"/><use href="#pet" transform="rotate(144)"/>
+        <use href="#pet" transform="rotate(216)"/><use href="#pet" transform="rotate(288)"/>
+        <circle r="7" fill="#fff4f7"/>
+        <g fill="#c25578"><circle cx="0" cy="-3.5" r="1.3"/><circle cx="3.3" cy="-1" r="1.3"/><circle cx="2" cy="3" r="1.3"/><circle cx="-2" cy="3" r="1.3"/><circle cx="-3.3" cy="-1" r="1.3"/></g>
+      </svg>
+
+      <h1 class="nome holo" id="f-nome">Micaela Dias</h1>
+      <div class="sob"><span class="fio"></span><b id="f-tema">Primaveril</b><span class="fio"></span></div>
+      <p class="hero-data" id="f-hero-data"></p>
+
+      <div class="role" aria-hidden="true"><span class="wide" style="font-size:8px">role</span><i></i></div>
+    </header>
+
+    <section class="sec intro">
+      <span class="wide rv">O convite</span>
+      <p class="rv d1" id="f-texto"></p>
+    </section>
+
+    <!-- Foto: salve a foto como "micaela.jpeg" na mesma pasta. Sem foto, este bloco some sozinho. -->
+    <section class="sec" id="sec-foto">
+      <figure class="foto rv"><img src="micaela.jpeg" alt="Foto da Micaela" loading="lazy" onerror="document.getElementById('sec-foto').remove()"></figure>
+    </section>
+
+    <section class="sec">
+      <span class="wide rv">Salve a data</span>
+      <div class="data-grande holo rv d1" id="f-data-grande"></div>
+      <p class="wide data-sub rv d2" id="f-semana"></p>
+      <div class="hora rv d2" id="bloco-hora"><strong class="holo" id="f-hora"></strong><span>horário de<br>Manaus</span></div>
+      <div class="contagem rv d3" id="contagem">
+        <div><b id="cd-d">--</b><small>Dias</small></div>
+        <div><b id="cd-h">--</b><small>Horas</small></div>
+        <div><b id="cd-m">--</b><small>Min</small></div>
+        <div><b id="cd-s">--</b><small>Seg</small></div>
+      </div>
+    </section>
+
+    <section class="sec traje" id="sec-traje">
+      <span class="wide rv">Traje</span>
+      <h3 class="titulo holo rv d1" id="f-traje"></h3>
+      <p class="dica-cor rv d2" id="f-cores"></p>
+      <div class="bolinhas rv d2" aria-hidden="true"><i style="background:#fde3ea"></i><i style="background:#f6b3c7"></i><i style="background:#e27f9f"></i><i style="background:#b84d70"></i></div>
+    </section>
+
+    <section class="sec local">
+      <span class="wide rv">O local</span>
+      <h3 class="titulo holo rv d1" id="f-local"></h3>
+      <p class="det rv d1" id="f-local-det"></p>
+      <p class="end rv d2" id="f-endereco"></p>
+      <div class="links rv d3" id="f-links">
+        <a class="link" id="f-maps" href="#" target="_blank" rel="noopener">Google Maps
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 9L9 3M4 3h5v5"/></svg></a>
+        <a class="link" id="f-waze" href="#" target="_blank" rel="noopener">Waze
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 9L9 3M4 3h5v5"/></svg></a>
+      </div>
+    </section>
+
+    <section class="sec presentes" id="sec-presentes">
+      <span class="wide rv">Lista de presentes</span>
+      <h3 class="titulo holo rv d1">Com carinho</h3>
+      <p class="rv d1" style="margin:14px 0 22px;font-size:14px;color:var(--suave);line-height:1.6" id="f-lojas-txt">Se quiser presentear, estas são as lojas preferidas:</p>
+      <ul class="lojas rv d2" id="f-lojas"></ul>
+      <div class="pix rv d3" id="bloco-pix">
+        <span class="wide">Ou via Pix</span>
+        <p>Se preferir, você também pode presentear pelo Pix:</p>
+        <p class="chave" id="f-pix"></p>
+        <p class="banco" id="f-pix-banco"></p>
+        <button class="copiar" id="btnPix" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          <span>Copiar chave Pix</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="sec rsvp" id="sec-rsvp">
+      <span class="wide rv">Confirmação</span>
+      <h3 class="titulo holo rv d1">Você vem?</h3>
+      <p class="sub rv d2" id="f-prazo"></p>
+      <input class="guest rv d2" id="guest" type="text" autocomplete="name" placeholder="Seu nome (e de quem vem com você)" aria-label="Seu nome">
+      <div class="acoes rv d3">
+        <a class="btn btn-rosa" id="btnSim" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 20.5l1.3-3.9A8.5 8.5 0 1 1 8.2 19.5z"/><path d="M9.2 8.2c.2-.4.5-.5.8-.5h.5l1 2.2-.8.9c.6 1.2 1.5 2.1 2.6 2.7l.9-.8 2.2 1v.5c0 .4-.2.7-.6.9-.6.3-1.4.4-2.2.1-2.3-.9-4-2.7-4.8-5-.2-.7-.1-1.4.4-2z" fill="currentColor" stroke="none"/></svg>
+          Vou comparecer
+        </a>
+        <a class="btn btn-linha" id="btnNao" href="#" target="_blank" rel="noopener">Não poderei ir</a>
+      </div>
+    </section>
+
+    <section class="sec" style="padding-top:20px">
+      <a class="agenda rv" id="btnAgenda" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>
+        <span id="agendaTxt">Salvar na agenda</span>
+      </a>
+    </section>
+
+    <footer class="fim">
+      <span class="fio rv" style="max-width:120px;margin:0 auto 34px"></span>
+      <p class="assin holo rv" id="f-assin"></p>
+      <span class="wide rv" id="f-assin2"></span>
+      <p class="marca">Convite criado por <a href="https://convidaeu.com.br" target="_blank" rel="noopener">Convida&amp;u</a></p>
+    </footer>
+  </main>
+
+  <div class="petalas perto" id="pet3" aria-hidden="true"></div>
+
+  <script>
+    /* =========================================================
+       DADOS DO CONVITE — edite só aqui
+       Campo vazio ('') = o bloco correspondente some do convite.
+       ========================================================= */
+    const CONFIG = {
+      nome: 'Micaela Dias',
+      ocasiao: 'Você é nosso convidado', // texto do topo. ex.: '15 Anos' | 'Meu aniversário'
+      tema: 'Primaveril',
+      data: '2026-12-14',      // AAAA-MM-DD
+      horario: '20:30',
+      fuso: '-04:00',          // Manaus = -04:00 (Brasília seria -03:00)
+      local: 'Coco Bambu',
+      localDetalhe: 'Shopping Ponta Negra',
+      endereco: 'Av. Coronel Teixeira, 5705 — Ponta Negra',
+      cidade: 'Manaus - AM',
+      traje: 'Esporte fino',
+      cores: 'Tema primaveril em tons de rosa 🌸',
+      lojasTitulo: 'Amazonas Shopping',  // aparece ao lado de cada loja
+      lojas: ['Life by Vivara', 'Top Internacional', 'MAC'],
+      pix: '047.045.723-85',   // aparece assim; o botão copia só os números
+      pixBanco: 'Banco do Brasil',
+      pixNome: '',             // nome do titular da chave (opcional, ajuda o convidado a conferir)
+      whatsapp: '',            // só números, com 55 + DDD. ex.: '5592999999999' — vazio esconde a confirmação
+      confirmarAte: '',        // opcional, ex.: '2026-12-05' → "Confirme até 05/12"
+      texto: 'Na estação das flores, quero celebrar mais um capítulo da minha história ao lado de quem faz a minha vida florescer. Será uma alegria ter você comigo nessa noite especial.',
+      fonteNome: 'pinyon',     // letra do nome: 'pinyon' (caligrafia) | 'greatvibes' (cursiva) | 'playfair' (itálico)
+      musica: true,            // false = convite sem música
+      volume: 0.5,             // 0 a 1
+      duracaoHoras: 4          // usado só no "Salvar na agenda"
+    };
+    /* ========================================================= */
+
+    const $ = (id) => document.getElementById(id);
+    const reduzir = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const [ano, mes, dia] = CONFIG.data.split('-');
+    const semana = ['Domingo','Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado'];
+    const inicio = new Date(`${CONFIG.data}T${CONFIG.horario || '00:00'}:00${CONFIG.fuso}`);
+    const primeiroNome = CONFIG.nome.split(' ')[0];
+
+    /* ---------- Letra do nome ---------- */
+    (function(){
+      const F = {
+        playfair:   ["'Playfair Display',Georgia,serif", 'italic', '500', .9],
+        greatvibes: ["'Great Vibes',cursive", 'normal', '400', 1.05],
+        pinyon:     ["'Pinyon Script',cursive", 'normal', '400', .95]
+      }[CONFIG.fonteNome] || ["'Pinyon Script',cursive", 'normal', '400', .95];
+      const st = document.documentElement.style;
+      st.setProperty('--fonte-nome', F[0]); st.setProperty('--estilo-nome', F[1]);
+      st.setProperty('--peso-nome', F[2]); st.setProperty('--escala-nome', F[3]);
+    })();
+
+    /* ---------- Textos ---------- */
+    $('f-nome').textContent = CONFIG.nome;
+    $('f-assin').textContent = CONFIG.nome;
+    $('f-ocasiao').textContent = CONFIG.ocasiao;
+    $('f-tema').textContent = CONFIG.tema;
+    $('f-hero-data').textContent = `${dia} · ${mes} · ${ano}`;
+    $('f-data-grande').innerHTML = `${dia}<span class="pt">.</span>${mes}`;
+    $('f-semana').textContent = `${semana[new Date(`${CONFIG.data}T12:00:00${CONFIG.fuso}`).getUTCDay()]} · ${ano}`;
+    $('f-assin2').textContent = `${CONFIG.tema} · ${dia}.${mes}.${ano}`;
+    if (CONFIG.texto) $('f-texto').textContent = CONFIG.texto; else $('f-texto').closest('section').remove();
+    if (!CONFIG.musica) $('abrirAlt').textContent = 'ou toque aqui para abrir';
+
+    if (CONFIG.horario) {
+      const [h, m] = CONFIG.horario.split(':');
+      $('f-hora').textContent = `${Number(h)}h${m && m !== '00' ? m : ''}`;
+      if (CONFIG.fuso !== '-04:00') $('bloco-hora').querySelector('span').innerHTML = 'início da<br>festa';
+    } else $('bloco-hora').remove();
+
+    if (CONFIG.traje) { $('f-traje').textContent = CONFIG.traje; $('f-cores').textContent = CONFIG.cores; if (!CONFIG.cores) $('f-cores').remove(); }
+    else $('sec-traje').remove();
+
+    $('f-local').textContent = CONFIG.local;
+    if (CONFIG.localDetalhe) $('f-local-det').textContent = CONFIG.localDetalhe; else $('f-local-det').remove();
+    if (CONFIG.endereco) {
+      $('f-endereco').textContent = [CONFIG.endereco, CONFIG.cidade].filter(Boolean).join(', ');
+      const destino = [CONFIG.local, CONFIG.endereco.replace(' — ', ', '), CONFIG.cidade].filter(Boolean).join(', ');
+      $('f-maps').href = 'https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=' + encodeURIComponent(destino);
+      $('f-waze').href = 'https://waze.com/ul?navigate=yes&q=' + encodeURIComponent(destino);
+    } else { $('f-endereco').remove(); $('f-links').remove(); }
+
+    /* ---------- Presentes + Pix ---------- */
+    if (CONFIG.lojas.length) {
+      CONFIG.lojas.forEach((l) => {
+        const li = document.createElement('li');
+        li.innerHTML = '<strong></strong><span></span>';
+        li.firstChild.textContent = l; li.lastChild.textContent = CONFIG.lojasTitulo;
+        $('f-lojas').appendChild(li);
+      });
+    } else { $('f-lojas').remove(); $('f-lojas-txt').remove(); }
+    if (CONFIG.pix) {
+      $('f-pix').textContent = CONFIG.pix;
+      $('f-pix-banco').textContent = [CONFIG.pixNome, CONFIG.pixBanco].filter(Boolean).join(' · ');
+      const btnPix = $('btnPix');
+      btnPix.addEventListener('click', async () => {
+        const chave = CONFIG.pix.replace(/\D/g, '').length === 11 ? CONFIG.pix.replace(/\D/g, '') : CONFIG.pix;
+        let ok = false;
+        try { await navigator.clipboard.writeText(chave); ok = true; } catch (e) {
+          const t = document.createElement('textarea'); t.value = chave; t.style.position = 'fixed'; t.style.opacity = '0';
+          document.body.appendChild(t); t.select(); try { ok = document.execCommand('copy'); } catch (_) {} t.remove();
+        }
+        btnPix.classList.toggle('ok', ok);
+        btnPix.querySelector('span').textContent = ok ? 'Chave copiada ✓' : 'Copie a chave acima';
+        if (ok && navigator.vibrate) navigator.vibrate(12);
+        setTimeout(() => { btnPix.classList.remove('ok'); btnPix.querySelector('span').textContent = 'Copiar chave Pix'; }, 2600);
+      });
+    } else $('bloco-pix').remove();
+    if (!CONFIG.lojas.length && !CONFIG.pix) $('sec-presentes').remove();
+
+    /* ---------- Confirmação pelo WhatsApp (vai e não vai) ---------- */
+    if (CONFIG.whatsapp) {
+      if (CONFIG.confirmarAte) {
+        const [, pm, pd] = CONFIG.confirmarAte.split('-');
+        $('f-prazo').textContent = `Por favor, confirme até ${pd}/${pm}. Escreva seu nome e escolha uma opção.`;
+      } else $('f-prazo').textContent = 'Escreva seu nome e escolha uma opção 🌸';
+      const guest = $('guest');
+      const linkWhats = (vai) => {
+        const quem = guest.value.trim();
+        const msg = vai
+          ? `Olá! ${quem ? `Aqui é ${quem}. ` : ''}Confirmo minha presença na celebração da ${primeiroNome} 🌸`
+          : `Olá! ${quem ? `Aqui é ${quem}. ` : ''}Infelizmente não poderei comparecer na celebração da ${primeiroNome}. Desejo uma noite linda! 🌸`;
+        return `https://api.whatsapp.com/send?phone=${CONFIG.whatsapp}&text=${encodeURIComponent(msg)}`;
+      };
+      ['btnSim', 'btnNao'].forEach((id) => {
+        const btn = $(id), vai = id === 'btnSim';
+        const atualizar = () => { btn.href = linkWhats(vai); };
+        atualizar(); guest.addEventListener('input', atualizar);
+        btn.addEventListener('click', (e) => {
+          if (!guest.value.trim()) {
+            e.preventDefault();
+            guest.classList.remove('erro'); void guest.offsetWidth; guest.classList.add('erro');
+            guest.placeholder = 'Escreva seu nome primeiro 😊'; guest.focus();
+          } else if (navigator.vibrate) navigator.vibrate(15);
+        });
+      });
+    } else $('sec-rsvp').remove();
+
+    /* ---------- Salvar na agenda (iPhone → .ics | Android/PC → Google Agenda) ---------- */
+    (function(){
+      const fmt = (d) => d.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+      const local = [CONFIG.local, CONFIG.localDetalhe, CONFIG.endereco.replace(' — ', ', '), CONFIG.cidade].filter(Boolean).join(', ');
+      const titulo = `Celebração da ${CONFIG.nome}`;
+      const detalhes = `Tema ${CONFIG.tema}${CONFIG.traje ? `\nTraje: ${CONFIG.traje}` : ''}`;
+      const fim = new Date(inicio.getTime() + CONFIG.duracaoHoras * 3600000);
+      const datas = `${fmt(inicio)}/${fmt(fim)}`;
+      const params = new URLSearchParams({ action: 'TEMPLATE', text: `${titulo} 🌸`, dates: datas, location: local, details: detalhes });
+      const linkGoogle = 'https://calendar.google.com/calendar/render?' + params.toString();
+      const esc = (t) => t.replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\n/g, '\\n');
+      const ics = [
+        'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Convida&u//Convite//PT','CALSCALE:GREGORIAN','METHOD:PUBLISH','BEGIN:VEVENT',
+        `UID:${CONFIG.data}-${primeiroNome.toLowerCase().normalize('NFD').replace(/[^a-z0-9]+/g, '-')}@convidaeu.com.br`, `DTSTAMP:${fmt(new Date())}`,
+        `DTSTART:${fmt(inicio)}`, `DTEND:${fmt(fim)}`, `SUMMARY:${esc(titulo)}`, `LOCATION:${esc(local)}`, `DESCRIPTION:${esc(detalhes)}`,
+        'BEGIN:VALARM','ACTION:DISPLAY',`DESCRIPTION:${esc('Amanhã é a celebração da ' + primeiroNome + '!')}`,'TRIGGER:-P1D','END:VALARM',
+        'END:VEVENT','END:VCALENDAR'
+      ].join('\r\n');
+      const ehIPhone = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      const btn = $('btnAgenda');
+      if (ehIPhone) {
+        $('agendaTxt').textContent = 'Salvar no calendário';
+        btn.removeAttribute('target');
+        btn.href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics);
+        btn.addEventListener('click', (e) => { e.preventDefault(); window.location.href = btn.href; });
+      } else btn.href = linkGoogle;
+    })();
+
+    /* ---------- Contagem regressiva ---------- */
+    const pad = (n) => String(n).padStart(2, '0');
+    function poe(id, v) {
+      const el = $(id); if (el.textContent === v) return;
+      el.textContent = v; el.classList.remove('rola'); void el.offsetWidth; el.classList.add('rola');
+    }
+    function tick(){
+      const diff = inicio - new Date();
+      if (diff <= 0) { $('contagem').innerHTML = '<p class="chegou">Chegou o grande dia 🌸</p>'; clearInterval(timer); return; }
+      poe('cd-d', pad(Math.floor(diff / 864e5)));
+      poe('cd-h', pad(Math.floor(diff % 864e5 / 36e5)));
+      poe('cd-m', pad(Math.floor(diff % 36e5 / 6e4)));
+      poe('cd-s', pad(Math.floor(diff % 6e4 / 1e3)));
+    }
+    const timer = setInterval(tick, 1000); tick();
+
+    /* ---------- Pétalas caindo ---------- */
+    function cair(box, n, min, max, vel) {
+      if (reduzir) return;
+      for (let i = 0; i < n; i++) {
+        const f = document.createElement('span'), s = min + Math.random() * (max - min);
+        f.style.width = s + 'px'; f.style.height = (s * .8) + 'px';
+        f.style.left = Math.random() * 100 + '%';
+        f.style.opacity = .5 + Math.random() * .45;
+        f.style.animationDuration = (vel + Math.random() * vel * .6) + 's';
+        f.style.animationDelay = (-Math.random() * vel * 1.6) + 's';
+        f.style.setProperty('--sway', (Math.random() * 90 - 45) + 'px');
+        box.appendChild(f);
+      }
+    }
+    const fraco = innerWidth < 640;
+    cair($('pet1'), fraco ? 14 : 24, 6, 9, 24);
+    cair($('pet2'), fraco ? 10 : 18, 10, 15, 16);
+    cair($('pet3'), fraco ? 4 : 6, 20, 28, 10);
+
+    /* ---------- Reflexo rosé: segue a inclinação do celular ---------- */
+    const incl = { x: 0, y: 0, alvoX: 0, alvoY: 0, sensor: false, mouse: false, base: null };
+    const lim = (v) => Math.max(-1, Math.min(1, v));
+    addEventListener('deviceorientation', (e) => {
+      if (e.gamma == null) return;
+      incl.sensor = true;
+      if (incl.base == null) incl.base = e.beta;
+      incl.alvoX = lim(e.gamma / 30); incl.alvoY = lim((e.beta - incl.base) / 30);
+    });
+    addEventListener('pointermove', (e) => {
+      if (e.pointerType !== 'mouse') return;
+      incl.mouse = true;
+      incl.alvoX = lim((e.clientX / innerWidth - .5) * 2); incl.alvoY = lim((e.clientY / innerHeight - .5) * 2);
+    });
+    document.addEventListener('mouseleave', () => { incl.mouse = false; });
+    let sensorPedido = false;
+    function pedirSensor() {   // iPhone pede permissão — precisa ser dentro de um toque
+      if (sensorPedido) return; sensorPedido = true;
+      try {
+        if (window.DeviceOrientationEvent && typeof DeviceOrientationEvent.requestPermission === 'function')
+          DeviceOrientationEvent.requestPermission().catch(() => {});
+      } catch (e) {}
+    }
+    const raiz = document.documentElement.style;
+    (function anima(t){
+      if (!incl.sensor && !incl.mouse) { incl.alvoX = Math.sin(t / 2600) * .75; incl.alvoY = Math.cos(t / 3400) * .5; }
+      incl.x += (incl.alvoX - incl.x) * .08; incl.y += (incl.alvoY - incl.y) * .08;
+      raiz.setProperty('--tx', incl.x.toFixed(3)); raiz.setProperty('--ty', incl.y.toFixed(3));
+      if (!reduzir) requestAnimationFrame(anima);
+    })(0);
+
+    /* =========================================================
+       MÚSICA — valsinha de caixinha de música, composta e tocada
+       pelo próprio navegador (não usa arquivo de áudio).
+       ========================================================= */
+    const Musica = (() => {
+      let ctx, master, bus, lp, ligada = false, prox = 0, compasso = 0;
+      const BEAT = 60 / 92;
+      const hz = (m) => 440 * Math.pow(2, (m - 69) / 12);
+      const ACORDE = { D:[62,66,69], Bm:[59,62,66], G:[55,59,62], A:[57,61,64], Fm:[54,57,61] };
+      const BAIXO  = { D:50, Bm:47, G:43, A:45, Fm:42 };
+      const SEQ = ['D','Bm','G','A', 'D','Fm','G','A', 'Bm','G','D','A', 'G','A','D','D'];
+      const MELODIA = [
+        [[78,2],[81,1]], [[83,2],[81,1]], [[79,1],[78,1],[76,1]], [[76,2],[73,1]],
+        [[74,2],[78,1]], [[81,2],[85,1]], [[83,1],[81,1],[79,1]], [[81,3]],
+        [[86,2],[83,1]], [[83,2],[79,1]], [[81,2],[78,1]], [[76,2],[81,1]],
+        [[79,1],[83,1],[86,1]], [[85,1.5],[83,.5],[81,1]], [[78,1],[81,1],[86,1]], [[86,3]]
+      ];
+      function eco(seg) {
+        const len = Math.floor(ctx.sampleRate * seg), buf = ctx.createBuffer(2, len, ctx.sampleRate);
+        for (let c = 0; c < 2; c++) { const d = buf.getChannelData(c); for (let i = 0; i < len; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 3); }
+        return buf;
+      }
+      function montar() {
+        const AC = window.AudioContext || window.webkitAudioContext;
+        ctx = new AC();
+        const comp = ctx.createDynamicsCompressor();
+        master = ctx.createGain(); master.gain.value = 0.0001;
+        bus = ctx.createGain();
+        const seco = ctx.createGain(); seco.gain.value = 0.8;
+        const molhado = ctx.createGain(); molhado.gain.value = 0.45;
+        const rev = ctx.createConvolver(); rev.buffer = eco(2.4);
+        bus.connect(seco); bus.connect(rev); rev.connect(molhado);
+        seco.connect(master); molhado.connect(master);
+        master.connect(comp); comp.connect(ctx.destination);
+        lp = ctx.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 900; lp.connect(bus);
+      }
+      function caixinha(m, t, vol, dur = 2.2) {
+        const f = hz(m);
+        [[1, 1, dur], [2, .26, dur * .5], [3.98, .07, dur * .22]].forEach(([mul, g, d]) => {
+          const o = ctx.createOscillator(), a = ctx.createGain();
+          o.type = 'sine'; o.frequency.value = f * mul;
+          a.gain.setValueAtTime(0.0001, t);
+          a.gain.exponentialRampToValueAtTime(vol * g, t + 0.006);
+          a.gain.exponentialRampToValueAtTime(0.0001, t + d);
+          o.connect(a); a.connect(bus); o.start(t); o.stop(t + d + 0.05);
+        });
+      }
+      function fundo(notas, t, dur) {
+        notas.forEach((m) => [-5, 5].forEach((det) => {
+          const o = ctx.createOscillator(), a = ctx.createGain();
+          o.type = 'triangle'; o.frequency.value = hz(m); o.detune.value = det;
+          a.gain.setValueAtTime(0.0001, t);
+          a.gain.linearRampToValueAtTime(0.02, t + 0.6);
+          a.gain.setValueAtTime(0.02, t + dur - 0.2);
+          a.gain.linearRampToValueAtTime(0.0001, t + dur + 0.6);
+          o.connect(a); a.connect(lp); o.start(t); o.stop(t + dur + 0.7);
+        }));
+      }
+      function baixo(m, t) {
+        [[1, .15], [2, .06]].forEach(([mul, g]) => {
+          const o = ctx.createOscillator(), a = ctx.createGain();
+          o.type = 'sine'; o.frequency.value = hz(m) * mul;
+          a.gain.setValueAtTime(0.0001, t);
+          a.gain.exponentialRampToValueAtTime(g, t + 0.02);
+          a.gain.exponentialRampToValueAtTime(0.0001, t + 1.6);
+          o.connect(a); a.connect(bus); o.start(t); o.stop(t + 1.7);
+        });
+      }
+      function agendar() {
+        while (prox < ctx.currentTime + 0.6) {
+          const n = compasso % SEQ.length, c = SEQ[n], t = prox;
+          fundo(ACORDE[c], t, BEAT * 3);
+          baixo(BAIXO[c], t);
+          [1, 2].forEach((b) => ACORDE[c].slice(1).forEach((m) => caixinha(m, t + b * BEAT, 0.045, 1)));
+          let off = 0;
+          MELODIA[n].forEach(([m, d]) => { caixinha(m, t + off * BEAT, 0.17); off += d; });
+          prox += BEAT * 3; compasso++;
+        }
+      }
+      function fade(alvo, seg) {
+        const t = ctx.currentTime;
+        master.gain.cancelScheduledValues(t);
+        master.gain.setValueAtTime(Math.max(master.gain.value, 0.0001), t);
+        master.gain.exponentialRampToValueAtTime(Math.max(alvo, 0.0001), t + seg);
+      }
+      return {
+        iniciar() {
+          if (ctx) { if (ligada && ctx.state !== 'running') ctx.resume(); return true; }
+          try {
+            if (navigator.audioSession) navigator.audioSession.type = 'playback';
+            montar(); ctx.resume();
+            const t = ctx.currentTime + 0.05;
+            [74, 78, 81, 86].forEach((m, i) => caixinha(m, t + i * 0.12, 0.12, 2));
+            prox = t + 1.2;
+            setInterval(agendar, 100); agendar();
+            fade(CONFIG.volume, 2.5);
+            ligada = true; return true;
+          } catch (e) { return false; }
+        },
+        tocando: () => !!ctx && ligada && ctx.state === 'running',
+        precisaDestravar: () => !ctx || (ligada && ctx.state !== 'running'),
+        alternar() {
+          if (!ctx) { Musica.iniciar(); return true; }
+          if (ligada && ctx.state === 'running') { fade(0.0001, 0.4); setTimeout(() => ctx.suspend(), 450); ligada = false; }
+          else { ligada = true; ctx.resume().then(() => fade(CONFIG.volume, 1.2)); }
+          return ligada;
+        },
+        pausarFora(oculta) { if (!ctx || !ligada) return; oculta ? ctx.suspend() : ctx.resume(); }
+      };
+    })();
+    const btnMusica = $('btnMusica');
+    btnMusica.addEventListener('click', () => {
+      const t = Musica.alternar();
+      btnMusica.classList.toggle('off', !t);
+      btnMusica.setAttribute('aria-label', t ? 'Pausar música' : 'Tocar música');
+    });
+    document.addEventListener('visibilitychange', () => Musica.pausarFora(document.hidden));
+
+    /* =========================================================
+       VÉU DE PÉTALAS — o convidado varre com o dedo
+       ========================================================= */
+    const veu = $('veu'), g = veu.getContext('2d');
+    let W = 0, H = 0, COLS = 14, ROWS = 28, grade, limpos = 0, aberto = false, arrastando = false, ultimo = null;
+
+    function petala(x, y, s, ang, c1, c2) {
+      g.save(); g.translate(x, y); g.rotate(ang);
+      const gr = g.createLinearGradient(0, 0, s, 0); gr.addColorStop(0, c1); gr.addColorStop(1, c2);
+      g.fillStyle = gr;
+      g.beginPath(); g.moveTo(0, 0);
+      g.bezierCurveTo(s * .35, -s * .5, s * .9, -s * .42, s, -s * .06);
+      g.lineTo(s * .88, 0); g.lineTo(s, s * .06);
+      g.bezierCurveTo(s * .9, s * .42, s * .35, s * .5, 0, 0);
+      g.fill();
+      g.strokeStyle = 'rgba(255,255,255,.35)'; g.lineWidth = .7;
+      g.beginPath(); g.moveTo(s * .08, 0); g.quadraticCurveTo(s * .5, -s * .04, s * .8, 0); g.stroke();
+      g.restore();
+    }
+    function pintarVeu() {
+      const r = veu.getBoundingClientRect();
+      W = r.width; H = r.height;
+      const dpr = Math.min(devicePixelRatio || 1, 2);
+      veu.width = Math.round(W * dpr); veu.height = Math.round(H * dpr);
+      g.setTransform(dpr, 0, 0, dpr, 0, 0);
+      grade = new Uint8Array(COLS * ROWS); limpos = 0;
+      const base = g.createLinearGradient(0, 0, W, H);
+      base.addColorStop(0, '#fde4ec'); base.addColorStop(.5, '#f9cbd9'); base.addColorStop(1, '#f6bfd0');
+      g.fillStyle = base; g.fillRect(0, 0, W, H);
+      const cores = [['#ffe4ec','#f6a9c0'], ['#fbd0dc','#e8829f'], ['#fff1f5','#f4b6c8'], ['#f7bfd0','#d9688b'], ['#ffffff','#f9c9d7']];
+      const qtd = Math.round(W * H / 620);
+      for (let i = 0; i < qtd; i++) {
+        const [c1, c2] = cores[(Math.random() * cores.length) | 0];
+        petala(Math.random() * W, Math.random() * H, 16 + Math.random() * 26, Math.random() * Math.PI * 2, c1, c2);
+      }
+      // brilho suave por cima
+      const luz = g.createRadialGradient(W * .5, H * .45, 0, W * .5, H * .45, Math.max(W, H) * .7);
+      luz.addColorStop(0, 'rgba(255,255,255,.18)'); luz.addColorStop(1, 'rgba(255,255,255,0)');
+      g.fillStyle = luz; g.fillRect(0, 0, W, H);
+    }
+    function marcar(x, y, r) {
+      const cw = W / COLS, ch = H / ROWS;
+      const c0 = Math.max(0, Math.floor((x - r) / cw)), c1 = Math.min(COLS - 1, Math.floor((x + r) / cw));
+      const r0 = Math.max(0, Math.floor((y - r) / ch)), r1 = Math.min(ROWS - 1, Math.floor((y + r) / ch));
+      for (let cy = r0; cy <= r1; cy++) for (let cx = c0; cx <= c1; cx++) {
+        const i = cy * COLS + cx; if (!grade[i]) { grade[i] = 1; limpos++; }
+      }
+    }
+    function pincel(x, y) {
+      const r = Math.max(36, W * .12);
+      g.save(); g.globalCompositeOperation = 'destination-out';
+      const gr = g.createRadialGradient(x, y, 0, x, y, r);
+      gr.addColorStop(0, 'rgba(0,0,0,1)'); gr.addColorStop(.55, 'rgba(0,0,0,.9)'); gr.addColorStop(1, 'rgba(0,0,0,0)');
+      g.fillStyle = gr; g.beginPath(); g.arc(x, y, r, 0, 7); g.fill(); g.restore();
+      marcar(x, y, r * .6);
+    }
+    function traco(x, y) {
+      if (!ultimo) { pincel(x, y); ultimo = { x, y }; return; }
+      const dx = x - ultimo.x, dy = y - ultimo.y, d = Math.hypot(dx, dy), passos = Math.max(1, Math.ceil(d / 9));
+      for (let i = 1; i <= passos; i++) pincel(ultimo.x + dx * i / passos, ultimo.y + dy * i / passos);
+      ultimo = { x, y };
+    }
+    const fracao = () => limpos / (COLS * ROWS);
+
+    // Som e sensor só podem ligar num toque ou quando o dedo sai da tela (regra dos celulares).
+    function destravar() {
+      pedirSensor();
+      if (CONFIG.musica && Musica.precisaDestravar() && Musica.iniciar()) btnMusica.hidden = false;
+    }
+    ['pointerup', 'touchend', 'click'].forEach((ev) => document.addEventListener(ev, destravar, true));
+    const esconderDica = () => $('dica').classList.add('some');
+
+    function abrir() {
+      if (aberto) return; aberto = true; arrastando = false;
+      esconderDica(); $('abrirAlt').classList.add('some');
+      veu.classList.add('some');
+      if (navigator.vibrate) navigator.vibrate(12);
+      setTimeout(() => { document.body.classList.remove('locked'); document.body.classList.add('aberto'); observar(); }, 500);
+      setTimeout(() => { veu.remove(); $('dica').remove(); $('abrirAlt').remove(); }, 1900);
+    }
+    veu.addEventListener('pointerdown', (e) => {
+      if (aberto) return;
+      arrastando = true; ultimo = null;
+      try { veu.setPointerCapture(e.pointerId); } catch (_) {}
+      esconderDica(); traco(e.clientX, e.clientY);
+    });
+    veu.addEventListener('pointermove', (e) => {
+      if (!arrastando || aberto) return;
+      traco(e.clientX, e.clientY);
+      if (fracao() > .42) abrir();      // a música liga quando o dedo sair
+    });
+    const soltar = () => {
+      destravar();
+      if (!arrastando) return;
+      arrastando = false; ultimo = null;
+      if (fracao() > .3) abrir();
+    };
+    veu.addEventListener('pointerup', soltar);
+    veu.addEventListener('pointercancel', soltar);
+    veu.addEventListener('touchend', destravar, { passive: true });
+
+    $('abrirAlt').addEventListener('click', () => {
+      destravar(); esconderDica(); $('abrirAlt').classList.add('some');
+      const t0 = performance.now(), dur = 900; ultimo = null;
+      (function passa(t) {
+        const p = Math.min(1, (t - t0) / dur);
+        traco(W * (.1 + .8 * p), H * (.5 + Math.sin(p * Math.PI * 3) * .12));
+        if (p < 1) requestAnimationFrame(passa); else abrir();
+      })(t0);
+    });
+
+    pintarVeu();
+    let larguraAntes = innerWidth;
+    addEventListener('resize', () => {
+      if (!aberto && Math.abs(innerWidth - larguraAntes) > 40) { larguraAntes = innerWidth; pintarVeu(); }
+    });
+
+    /* ---------- Entrada suave das seções ao rolar ---------- */
+    function observar() {
+      const io = new IntersectionObserver((ents) => ents.forEach((e) => {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      }), { threshold: .2, rootMargin: '0px 0px -8% 0px' });
+      document.querySelectorAll('main .rv').forEach((el) => io.observe(el));
+    }
+  </script>
+</body>
+</html>
