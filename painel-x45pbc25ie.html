@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Confirmações • Micaela Dias</title>
   <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="Acompanhe quem confirmou presença na celebração da Micaela — 14.12.2026." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://micaela.convidaeu.com.br/painel-x45pbc25ie.html" />
+  <meta property="og:title" content="Lista de confirmações • Micaela Dias" />
+  <meta property="og:description" content="Acompanhe em tempo real quem confirmou presença 🌸" />
+  <meta property="og:image" content="https://micaela.convidaeu.com.br/og-painel.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#fbe3ea" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -139,6 +148,7 @@
       data: '14 · 12 · 2026',
       // o mesmo link do Apps Script usado no convite (termina em /exec)
       planilha: 'https://script.google.com/macros/s/AKfycbw7PDPMVjquYlGlpYqxg6KieuKhPxgeTap8KvOwPgguCnakWuF9Lpkh1Wvb_arRGdXi/exec',
+      chave: 'mica-x45pbc25ie', // a mesma CHAVE_PAINEL do script — assim a família não precisa digitar senha
       atualizarCada: 60        // segundos
     };
     /* ========================================================= */
@@ -152,7 +162,7 @@
 
     // A senha pode vir no link (painel.html?chave=...) — depois fica lembrada neste aparelho
     const daUrl = new URLSearchParams(location.search).get('chave');
-    try { senha = daUrl || localStorage.getItem(CHAVE_LOCAL) || ''; } catch (e) { senha = daUrl || ''; }
+    try { senha = CONFIG.chave || daUrl || localStorage.getItem(CHAVE_LOCAL) || ''; } catch (e) { senha = CONFIG.chave || daUrl || ''; }
     if (daUrl) history.replaceState(null, '', location.pathname);   // tira a senha da barra de endereço
 
     function mostrarLogin(msg) {
