@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Micaela Dias • Primaveril • 14.12.2026</title>
+  <title>Micaela Dias • 14.12.2026</title>
   <meta name="description" content="Você está convidado(a) para a celebração da Micaela Dias — 14/12/2026, Coco Bambu Shopping Ponta Negra." />
   <!-- Prévia do WhatsApp: se o subdomínio for outro, troque o endereço abaixo -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://micaela.convidaeu.com.br/" />
+  <meta property="og:url" content="https://primaveril.vercel.app/" />
   <meta property="og:title" content="Micaela Dias • Você está convidado(a)" />
-  <meta property="og:description" content="Primaveril • 14.12.2026 • Coco Bambu Ponta Negra — toque para abrir o convite 🌸" />
-  <meta property="og:image" content="https://micaela.convidaeu.com.br/og.jpg" />
+  <meta property="og:description" content="14.12.2026 • Coco Bambu Ponta Negra — toque para abrir o convite 🌸" />
+  <meta property="og:image" content="https://primaveril.vercel.app/og.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -225,6 +225,33 @@
       background:linear-gradient(105deg,transparent,rgba(255,255,255,.55),transparent);animation:reflexo 3.8s ease-in-out infinite}
     @keyframes reflexo{0%,55%{left:-60%}85%,100%{left:120%}}
     .btn-linha{color:var(--rosa-800);border:1px solid rgba(156,58,94,.45);background:rgba(255,255,255,.35)}
+    /* formulário de confirmação */
+    .sec.sem-fio::before{display:none}
+    .rsvp-form{max-width:340px;margin:26px auto 0;display:flex;flex-direction:column;gap:18px}
+    .rsvp-form[hidden],.obrigado[hidden],.qtd[hidden]{display:none}
+    .rsvp-form .guest{margin:0 auto}
+    .escolha{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .opc{padding:15px 8px;border-radius:16px;border:1px solid rgba(156,58,94,.35);background:rgba(255,255,255,.45);color:var(--rosa-800);
+      font:600 13px var(--sans);cursor:pointer;transition:background .2s,color .2s,box-shadow .2s}
+    .opc[aria-checked="true"]{background:linear-gradient(135deg,#d97a9a,#9c3a5e);color:#fff;border-color:transparent;box-shadow:0 8px 20px rgba(156,58,94,.3)}
+    .qtd p{font-size:13.5px;color:var(--suave)}
+    .stepper{display:flex;align-items:center;justify-content:center;gap:20px;margin-top:10px}
+    .stepper button{width:46px;height:46px;border-radius:50%;border:1px solid rgba(156,58,94,.4);background:rgba(255,255,255,.6);font:400 24px var(--sans);color:var(--rosa-800);cursor:pointer}
+    .stepper output{min-width:44px;font-family:var(--serif);font-variant-numeric:lining-nums;font-size:2.3rem;color:var(--rosa-800)}
+    .recado{width:100%;padding:14px 16px;border-radius:16px;border:1px solid rgba(156,58,94,.3);background:rgba(255,255,255,.55);
+      font:400 16px var(--sans);color:var(--rosa-900);resize:vertical;outline:none}
+    .recado::placeholder{color:rgba(92,42,60,.5);font-size:14px}
+    .recado:focus{border-color:var(--rosa-700)}
+    .erro-msg{font-size:13px;color:#b3263f}
+    .erro-msg:empty{display:none}
+    .rsvp-form .btn{margin:2px auto 0}
+    .btn[disabled]{opacity:.6;pointer-events:none}
+    .obrigado{margin:26px auto 0;max-width:340px;padding:30px 22px;border-radius:24px;background:rgba(255,255,255,.62);border:1px solid #fff;box-shadow:0 14px 34px rgba(156,58,94,.14)}
+    .ok-icone{font-size:2.3rem;line-height:1}
+    .obrigado h4{font-family:var(--serif);font-style:italic;font-weight:400;font-size:1.8rem;color:var(--rosa-800);margin-top:10px}
+    .obrigado p{font-size:14px;color:var(--suave);line-height:1.6;margin-top:8px}
+    .obrigado .btn{margin:20px auto 0}
+    .link-mudar{display:block;margin:16px auto 0;background:none;border:0;color:var(--rosa-700);font:500 13px var(--sans);text-decoration:underline;cursor:pointer}
     .agenda{display:inline-flex;align-items:center;gap:8px;margin-top:22px;color:var(--rosa-800);font-size:13px;text-decoration:none;
       border-bottom:1px solid var(--fio);padding-bottom:3px}
     .agenda svg{width:15px;height:15px}
@@ -289,7 +316,6 @@
       </svg>
 
       <h1 class="nome holo" id="f-nome">Micaela Dias</h1>
-      <div class="sob"><span class="fio"></span><b id="f-tema">Primaveril</b><span class="fio"></span></div>
       <p class="hero-data" id="f-hero-data"></p>
 
       <div class="role" aria-hidden="true"><span class="wide" style="font-size:8px">role</span><i></i></div>
@@ -321,8 +347,6 @@
     <section class="sec traje" id="sec-traje">
       <span class="wide rv">Traje</span>
       <h3 class="titulo holo rv d1" id="f-traje"></h3>
-      <p class="dica-cor rv d2" id="f-cores"></p>
-      <div class="bolinhas rv d2" aria-hidden="true"><i style="background:#fde3ea"></i><i style="background:#f6b3c7"></i><i style="background:#e27f9f"></i><i style="background:#b84d70"></i></div>
     </section>
 
     <section class="sec local">
@@ -359,17 +383,34 @@
       <span class="wide rv">Confirmação</span>
       <h3 class="titulo holo rv d1">Você vem?</h3>
       <p class="sub rv d2" id="f-prazo"></p>
-      <input class="guest rv d2" id="guest" type="text" autocomplete="name" placeholder="Seu nome (e de quem vem com você)" aria-label="Seu nome">
-      <div class="acoes rv d3">
-        <a class="btn btn-rosa" id="btnSim" href="#" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 20.5l1.3-3.9A8.5 8.5 0 1 1 8.2 19.5z"/><path d="M9.2 8.2c.2-.4.5-.5.8-.5h.5l1 2.2-.8.9c.6 1.2 1.5 2.1 2.6 2.7l.9-.8 2.2 1v.5c0 .4-.2.7-.6.9-.6.3-1.4.4-2.2.1-2.3-.9-4-2.7-4.8-5-.2-.7-.1-1.4.4-2z" fill="currentColor" stroke="none"/></svg>
-          Vou comparecer
-        </a>
-        <a class="btn btn-linha" id="btnNao" href="#" target="_blank" rel="noopener">Não poderei ir</a>
+      <form class="rsvp-form rv d2" id="formRsvp" novalidate>
+        <input class="guest" id="guest" type="text" autocomplete="name" maxlength="120" placeholder="Seu nome completo" aria-label="Seu nome completo">
+        <div class="escolha" role="radiogroup" aria-label="Você vai?">
+          <button type="button" class="opc" data-vai="sim" role="radio" aria-checked="false">Vou comparecer 🌸</button>
+          <button type="button" class="opc" data-vai="nao" role="radio" aria-checked="false">Não poderei ir</button>
+        </div>
+        <div class="qtd" id="blocoQtd" hidden>
+          <p>Quantas pessoas no total, contando com você?</p>
+          <div class="stepper">
+            <button type="button" id="menos" aria-label="Menos uma pessoa">−</button>
+            <output id="qtd" aria-live="polite">1</output>
+            <button type="button" id="mais" aria-label="Mais uma pessoa">+</button>
+          </div>
+        </div>
+        <textarea class="recado" id="recado" maxlength="500" rows="3" aria-label="Recado (opcional)"></textarea>
+        <p class="erro-msg" id="erroRsvp" role="alert"></p>
+        <button class="btn btn-rosa" id="btnEnviar" type="submit">Enviar confirmação</button>
+      </form>
+      <div class="obrigado" id="obrigado" hidden>
+        <p class="ok-icone">🌸</p>
+        <h4 id="okTitulo"></h4>
+        <p id="okTexto"></p>
+        <a class="btn btn-linha" id="btnAvisarWhats" target="_blank" rel="noopener" hidden>Avisar também no WhatsApp</a>
+        <button type="button" class="link-mudar" id="btnMudar">Mudar minha resposta</button>
       </div>
     </section>
 
-    <section class="sec" style="padding-top:20px">
+    <section class="sec sem-fio" style="padding-top:20px">
       <a class="agenda rv" id="btnAgenda" href="#" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>
         <span id="agendaTxt">Salvar na agenda</span>
@@ -393,7 +434,6 @@
     const CONFIG = {
       nome: 'Micaela Dias',
       ocasiao: 'Você é nosso convidado', // texto do topo. ex.: '15 Anos' | 'Meu aniversário'
-      tema: 'Primaveril',
       data: '2026-12-14',      // AAAA-MM-DD
       horario: '20:30',
       fuso: '-04:00',          // Manaus = -04:00 (Brasília seria -03:00)
@@ -402,15 +442,16 @@
       endereco: 'Av. Coronel Teixeira, 5705 — Ponta Negra',
       cidade: 'Manaus - AM',
       traje: 'Esporte fino',
-      cores: 'Tema primaveril em tons de rosa 🌸',
-      lojasTitulo: 'Amazonas Shopping',  // aparece ao lado de cada loja
+      lojasTitulo: 'Shopping Manauara',  // aparece ao lado de cada loja
       lojas: ['Life by Vivara', 'Top Internacional', 'MAC'],
-      pix: '047.045.723-85',   // aparece assim; o botão copia só os números
+      pix: '047.045.722-85',   // aparece assim; o botão copia só os números
       pixBanco: 'Banco do Brasil',
       pixNome: '',             // nome do titular da chave (opcional, ajuda o convidado a conferir)
-      whatsapp: '',            // só números, com 55 + DDD. ex.: '5592999999999' — vazio esconde a confirmação
+      planilha: 'https://script.google.com/macros/s/AKfycby4KKIoz2Nnd1o_4D1EmisYjlvqSgXWFf3HSgEk_uofbfcxLTazQmPHLxhJ_4FpjQb6/exec',            // link do Apps Script (termina em /exec) — as confirmações caem na planilha
+      whatsapp: '559281021617',            // opcional: 55 + DDD + número. Com planilha: vira botão "Avisar também no WhatsApp". Sem planilha: a confirmação vai pelo WhatsApp
+      maxPessoas: 10,          // máximo de pessoas por confirmação
       confirmarAte: '',        // opcional, ex.: '2026-12-05' → "Confirme até 05/12"
-      texto: 'Na estação das flores, quero celebrar mais um capítulo da minha história ao lado de quem faz a minha vida florescer. Será uma alegria ter você comigo nessa noite especial.',
+      texto: 'Quero convidar você para viver essa noite especial comigo.',
       fonteNome: 'pinyon',     // letra do nome: 'pinyon' (caligrafia) | 'greatvibes' (cursiva) | 'playfair' (itálico)
       musica: false,           // true = com música ao abrir | false = sem som nenhum
       volume: 0.5,             // 0 a 1
@@ -441,11 +482,10 @@
     $('f-nome').textContent = CONFIG.nome;
     $('f-assin').textContent = CONFIG.nome;
     $('f-ocasiao').textContent = CONFIG.ocasiao;
-    $('f-tema').textContent = CONFIG.tema;
     $('f-hero-data').textContent = `${dia} · ${mes} · ${ano}`;
     $('f-data-grande').innerHTML = `${dia}<span class="pt">.</span>${mes}`;
     $('f-semana').textContent = `${semana[new Date(`${CONFIG.data}T12:00:00${CONFIG.fuso}`).getUTCDay()]} · ${ano}`;
-    $('f-assin2').textContent = `${CONFIG.tema} · ${dia}.${mes}.${ano}`;
+    $('f-assin2').textContent = `${dia}.${mes}.${ano}`;
     if (CONFIG.texto) $('f-texto').textContent = CONFIG.texto; else $('f-texto').closest('section').remove();
 
     if (CONFIG.horario) {
@@ -454,7 +494,7 @@
       if (CONFIG.fuso !== '-04:00') $('bloco-hora').querySelector('span').innerHTML = 'início da<br>festa';
     } else $('bloco-hora').remove();
 
-    if (CONFIG.traje) { $('f-traje').textContent = CONFIG.traje; $('f-cores').textContent = CONFIG.cores; if (!CONFIG.cores) $('f-cores').remove(); }
+    if (CONFIG.traje) $('f-traje').textContent = CONFIG.traje;
     else $('sec-traje').remove();
 
     $('f-local').textContent = CONFIG.local;
@@ -494,40 +534,95 @@
     } else $('bloco-pix').remove();
     if (!CONFIG.lojas.length && !CONFIG.pix) $('sec-presentes').remove();
 
-    /* ---------- Confirmação pelo WhatsApp (vai e não vai) ---------- */
-    if (CONFIG.whatsapp) {
+    /* ---------- Confirmação de presença (formulário → planilha do Google) ---------- */
+    if (!CONFIG.planilha && !CONFIG.whatsapp) $('sec-rsvp').remove();
+    else (function () {
+      const CHAVE = 'convite-' + primeiroNome.toLowerCase().normalize('NFD').replace(/[^a-z0-9]/g, '') + '-' + CONFIG.data + '-rsvp';
+      const ler = () => { try { return JSON.parse(localStorage.getItem(CHAVE) || 'null'); } catch (e) { return null; } };
+      const gravar = (d) => { try { localStorage.setItem(CHAVE, JSON.stringify(d)); } catch (e) {} };
+      const salvo = ler();
+      const idConvidado = (salvo && salvo.id) || (Date.now().toString(36) + Math.random().toString(36).slice(2, 8));
+      const guest = $('guest'), erro = $('erroRsvp');
+      let vai = null, qtd = 1;
+
       if (CONFIG.confirmarAte) {
         const [, pm, pd] = CONFIG.confirmarAte.split('-');
-        $('f-prazo').textContent = `Por favor, confirme até ${pd}/${pm}. Escreva seu nome e escolha uma opção.`;
-      } else $('f-prazo').textContent = 'Escreva seu nome e escolha uma opção 🌸';
-      const guest = $('guest');
-      const linkWhats = (vai) => {
-        const quem = guest.value.trim();
-        const msg = vai
-          ? `Olá! ${quem ? `Aqui é ${quem}. ` : ''}Confirmo minha presença na celebração da ${primeiroNome} 🌸`
-          : `Olá! ${quem ? `Aqui é ${quem}. ` : ''}Infelizmente não poderei comparecer na celebração da ${primeiroNome}. Desejo uma noite linda! 🌸`;
-        return `https://api.whatsapp.com/send?phone=${CONFIG.whatsapp}&text=${encodeURIComponent(msg)}`;
-      };
-      ['btnSim', 'btnNao'].forEach((id) => {
-        const btn = $(id), vai = id === 'btnSim';
-        const atualizar = () => { btn.href = linkWhats(vai); };
-        atualizar(); guest.addEventListener('input', atualizar);
-        btn.addEventListener('click', (e) => {
-          if (!guest.value.trim()) {
-            e.preventDefault();
-            guest.classList.remove('erro'); void guest.offsetWidth; guest.classList.add('erro');
-            guest.placeholder = 'Escreva seu nome primeiro 😊'; guest.focus();
-          } else if (navigator.vibrate) navigator.vibrate(15);
-        });
+        $('f-prazo').textContent = `Por favor, confirme até ${pd}/${pm}.`;
+      } else $('f-prazo').textContent = 'Preencha abaixo para a família organizar tudo com carinho 🌸';
+      $('recado').placeholder = `Deixe um recado para a ${primeiroNome} (opcional)`;
+
+      function escolher(v) {
+        vai = v;
+        document.querySelectorAll('.opc').forEach((b) => b.setAttribute('aria-checked', String(b.dataset.vai === v)));
+        $('blocoQtd').hidden = v !== 'sim'; erro.textContent = '';
+      }
+      document.querySelectorAll('.opc').forEach((b) => b.addEventListener('click', () => escolher(b.dataset.vai)));
+      const poeQtd = (n) => { qtd = Math.max(1, Math.min(CONFIG.maxPessoas, n)); $('qtd').textContent = qtd; };
+      $('menos').addEventListener('click', () => poeQtd(qtd - 1));
+      $('mais').addEventListener('click', () => poeQtd(qtd + 1));
+
+      function textoWhats(d) {
+        const rec = d.recado ? `\nRecado: ${d.recado}` : '';
+        return d.vai === 'sim'
+          ? `Olá! Aqui é ${d.nome}. Confirmo presença na celebração da ${primeiroNome} 🌸 Seremos ${d.pessoas} pessoa${d.pessoas > 1 ? 's' : ''}.${rec}`
+          : `Olá! Aqui é ${d.nome}. Infelizmente não poderei comparecer na celebração da ${primeiroNome}. Desejo uma noite linda! 🌸${rec}`;
+      }
+      const linkWhats = (d) => `https://api.whatsapp.com/send?phone=${CONFIG.whatsapp}&text=${encodeURIComponent(textoWhats(d))}`;
+
+      function mostrarObrigado(d) {
+        const pn = d.nome.split(' ')[0];
+        $('formRsvp').hidden = true; $('obrigado').hidden = false;
+        $('okTitulo').textContent = d.vai === 'sim' ? `Obrigada, ${pn}!` : `Que pena, ${pn}!`;
+        $('okTexto').textContent = d.vai === 'sim'
+          ? `Sua presença está confirmada${d.pessoas > 1 ? ` para ${d.pessoas} pessoas` : ''}. Te esperamos no dia ${dia}/${mes} 🌸`
+          : 'Sua resposta foi registrada. Obrigada por avisar com carinho!';
+        const bw = $('btnAvisarWhats');
+        if (CONFIG.whatsapp && CONFIG.planilha) { bw.href = linkWhats(d); bw.hidden = false; } else bw.hidden = true;
+      }
+      $('btnMudar').addEventListener('click', () => {
+        const d = ler();
+        $('obrigado').hidden = true; $('formRsvp').hidden = false;
+        if (d) { guest.value = d.nome; escolher(d.vai); poeQtd(d.pessoas || 1); $('recado').value = d.recado || ''; }
+        $('btnEnviar').textContent = 'Atualizar resposta';
       });
-    } else $('sec-rsvp').remove();
+
+      $('formRsvp').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const nome = guest.value.trim().replace(/\s+/g, ' ');
+        if (nome.length < 2) {
+          erro.textContent = 'Escreva seu nome 😊';
+          guest.classList.remove('erro'); void guest.offsetWidth; guest.classList.add('erro'); guest.focus(); return;
+        }
+        if (!vai) { erro.textContent = 'Escolha se você vai ou não 🌸'; return; }
+        const d = { id: idConvidado, nome, vai, pessoas: vai === 'sim' ? qtd : 0, recado: $('recado').value.trim().slice(0, 500) };
+        const btn = $('btnEnviar'), txt = btn.textContent;
+        if (CONFIG.planilha) {
+          btn.disabled = true; btn.textContent = 'Enviando…'; erro.textContent = '';
+          try {
+            const ctl = new AbortController(), tm = setTimeout(() => ctl.abort(), 15000);
+            await fetch(CONFIG.planilha, { method: 'POST', mode: 'no-cors', signal: ctl.signal,
+              body: new URLSearchParams({ id: d.id, nome: d.nome, vai: d.vai, pessoas: String(d.pessoas), recado: d.recado }) });
+            clearTimeout(tm);
+          } catch (err) {
+            btn.disabled = false; btn.textContent = txt;
+            erro.textContent = 'Não conseguimos enviar agora. Confira sua internet e tente de novo.'; return;
+          }
+          btn.disabled = false; btn.textContent = txt;
+        } else {
+          window.open(linkWhats(d), '_blank', 'noopener');
+        }
+        gravar(d); vibra(15); mostrarObrigado(d);
+      });
+
+      if (salvo && salvo.nome) mostrarObrigado(salvo);
+    })();
 
     /* ---------- Salvar na agenda (iPhone → .ics | Android/PC → Google Agenda) ---------- */
     (function(){
       const fmt = (d) => d.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
       const local = [CONFIG.local, CONFIG.localDetalhe, CONFIG.endereco.replace(' — ', ', '), CONFIG.cidade].filter(Boolean).join(', ');
       const titulo = `Celebração da ${CONFIG.nome}`;
-      const detalhes = `Tema ${CONFIG.tema}${CONFIG.traje ? `\nTraje: ${CONFIG.traje}` : ''}`;
+      const detalhes = CONFIG.traje ? `Traje: ${CONFIG.traje}` : '';
       const fim = new Date(inicio.getTime() + CONFIG.duracaoHoras * 3600000);
       const datas = `${fmt(inicio)}/${fmt(fim)}`;
       const params = new URLSearchParams({ action: 'TEMPLATE', text: `${titulo} 🌸`, dates: datas, location: local, details: detalhes });
@@ -752,7 +847,7 @@
     /* ---------- Capa: envelope ---------- */
     $('c-top').textContent = CONFIG.ocasiao;
     $('c-nome').textContent = CONFIG.nome;
-    $('c-sub').textContent = `${CONFIG.tema} · ${dia}.${mes}.${ano}`;
+    $('c-sub').textContent = `${dia} · ${mes} · ${ano}`;
     $('c-carta').textContent = primeiroNome;
     $('c-carta-data').textContent = `${dia} · ${mes} · ${ano}`;
     $('c-selo').textContent = CONFIG.nome.charAt(0);
